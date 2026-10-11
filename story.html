@@ -116,7 +116,7 @@
         headers: { 'Accept': 'application/json' }
     });
     sessionStorage.setItem('applicant-name', name);
-    window.location.href = 'confirmation.html';
+    window.location.href = 'confirmation.html?name=' + encodeURIComponent(name);
     });
     </script>
 </body>
