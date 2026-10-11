@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill The Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="story">
+        <div class="story-text">
+            <h2>My Story</h2>
+            <p>I have been working out my whole life, gym, bodyweight, you name it. But in 2022 everything changed. I committed fully to calisthenics and never looked back.</p>
+            <p>Even though my body was getting stronger, the lack of proper guidance was holding me back. I was getting injured often and my form was far from optimal, because your body learns exactly how you teach it, and without the right technique and consistency, bad habits build up fast. That changed in June 2025 when I started training under Christian Mariani, one of the best calisthenics athletes in the world. He showed me the correct and most effective path, the road to perfection.</p>
+            <p>In 2026 I became an International Champion in Strength and Endurance Calisthenics. That journey taught me the value of clean execution, smart programming and proper adaptation. Now I want to share that with you, a program built around the calisthenics mindset, correct movement patterns, and progressive overload that makes you genuinely stronger. The physique is just what follows.</p>
+        </div>
+        <div class="story-photos">
+            <div class="photo-wrap">
+                <img src="before.jpg" alt="2022">
+                <p class="photo-label">2022</p>
+            </div>
+            <div class="photo-wrap">
+                <img src="after.jpg" alt="2026">
+                <p class="photo-label">2026</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="apply">
+        <h2>Apply for coaching</h2>
+        <p>Fill out the form below</p>
+
+        <form action="https://formspree.io/f/xdeaddvv" method="POST" id="coaching-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+            <label for="age">Age</label>
+            <input type="date" id="age" name="age" placeholder="Your age" required>
+
+            <label for="country">Country</label>
+            <input input type="text" id="country" name="country" placeholder="Your country" required oninput="updateCountryCode()">
+
+            <div class="field-group">
+                <label>How long have you been training?</label>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="radio" name="experience" value="beginner" required> Complete beginner</label>
+                    <label class="radio-label"><input type="radio" name="experience" value="less than 1 year"> Less than 1 year</label>
+                    <label class="radio-label"><input type="radio" name="experience" value="1-3 years"> 1 to 3 years</label>
+                     <label class="radio-label"><input type="radio" name="experience" value="3+ years"> 3 or more years</label>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <label>Current training style</label>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="checkbox" name="style" value="gym"> Gym / Weight Lifting</label>
+                    <label class="radio-label"><input type="checkbox" name="style" value="calisthenics"> Bodyweight / Calisthenics</label>
+                    <label class="radio-label"><input type="checkbox" name="style" value="both"> Both</label>
+                    <label class="radio-label"><input type="checkbox" name="style" value="none"> No structured training</label>
+                </div>
+            </div>
+
+            <label for="goals">What are your goals and what do you want to achieve?</label>
+            <textarea id="goals" name="goals" placeholder="Tell me about your goals..." required></textarea>
+
+            <label for="limitations">What was or is still stopping you from achieving your goals by elevation your training to the next level? (Optional)</label>
+            <textarea id="limitations" name="limitations" placeholder="Any limitations..."></textarea>
+
+            <label for="phone">Phone Number</label>
+            <div class="phone-wrap">
+                <input type="text" id="country-code" name="country_code" readonly placeholder="+__">
+                <input type="text" id="phone" name="phone" placeholder="Your number" required>
+            </div>
+
+            <button type="submit">Send Application</button>
+        </form>
+
+        <div id="confirmation" style="display:none">
+            <div class="confirmation">
+                <h3>Thank you, <span id="conf-name"></span>!</h3>
+                <p>Your application has been received.</p>
+                <p>Upon submission, you will be personally contacted via Telegram within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+    const countryCodes = {
+        greece: '+30', germany: '+49', france: '+33',
+        italy: '+39', spain: '+34', uk: '+44',
+        'united kingdom': '+44', usa: '+1', 'united states': '+1',
+        cyprus: '+357', albania: '+355', bulgaria: '+359',
+        romania: '+40', serbia: '+381', croatia: '+385',
+        netherlands: '+31', belgium: '+32', sweden: '+46',
+        norway: '+47', denmark: '+45', finland: '+358',
+        portugal: '+351', poland: '+48', austria: '+43',
+        switzerland: '+41', australia: '+61', canada: '+1',
+        brazil: '+55', argentina: '+54', mexico: '+52',
+        turkey: '+90', russia: '+7', china: '+86',
+        japan: '+81', india: '+91', 'south africa': '+27'
+    };
+
+    function updateCountryCode() {
+        const country = document.getElementById('country').value.toLowerCase().trim();
+        const code = countryCodes[country] || '';
+        document.getElementById('country-code').value = code;
+        document.getElementById('country-code').placeholder = code ? code : '+__';
+    }
+
+    document.getElementById('coaching-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const data = new FormData(this);
+    await fetch(this.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+    });
+    sessionStorage.setItem('applicant-name', name);
+    window.location.href = 'confirmation.html';
+    });
+    </script>
+</body>
+</html>
