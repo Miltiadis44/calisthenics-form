@@ -5,12 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Received</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes dramaticFade {
+            0%   { opacity: 0; transform: translateY(40px) scale(0.95); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes lineExpand {
+            0%   { width: 0; }
+            100% { width: 80px; }
+        }
+
+        .conf-wrapper {
+            animation: dramaticFade 1s ease forwards;
+        }
+
+        .conf-line {
+            display: block;
+            height: 2px;
+            background-color: #F5A623;
+            width: 0;
+            margin: 24px auto;
+            animation: lineExpand 1s ease 0.8s forwards;
+        }
+
+        .conf-p1 {
+            opacity: 0;
+            animation: dramaticFade 0.8s ease 0.5s forwards;
+        }
+
+        .conf-p2 {
+            opacity: 0;
+            animation: dramaticFade 0.8s ease 0.9s forwards;
+        }
+    </style>
 </head>
 <body>
     <section id="confirmation-page">
-        <h2 id="conf-name"></h2>
-        <p>Your application has been received.</p>
-        <p>Upon submission, you will be personally contacted via Telegram within 24 hours.</p>
+        <div class="conf-wrapper">
+            <h2 id="conf-name"></h2>
+            <span class="conf-line"></span>
+            <p class="conf-p1">Your application has been received.</p>
+            <p class="conf-p2">Upon submission, you will be personally contacted via Telegram within 24 hours.</p>
+        </div>
     </section>
 
     <script>

@@ -8,13 +8,13 @@
 </head>
 <body>
     <section id="story">
-        <div class="story-text">
+        <div class="story-text animate">
             <h2>My Story</h2>
             <p>I have been working out my whole life, gym, bodyweight, you name it. But in 2022 everything changed. I committed fully to calisthenics and never looked back.</p>
             <p>Even though my body was getting stronger, the lack of proper guidance was holding me back. I was getting injured often and my form was far from optimal, because your body learns exactly how you teach it, and without the right technique and consistency, bad habits build up fast. That changed in June 2025 when I started training under Christian Mariani, one of the best calisthenics athletes in the world. He showed me the correct and most effective path, the road to perfection.</p>
             <p>In 2026 I became an International Champion in Strength and Endurance Calisthenics. That journey taught me the value of clean execution, smart programming and proper adaptation. Now I want to share that with you, a program built around the calisthenics mindset, correct movement patterns, and progressive overload that makes you genuinely stronger. The physique is just what follows.</p>
         </div>
-        <div class="story-photos">
+        <div class="story-photos animate">
             <div class="photo-wrap">
                 <img src="before.jpg" alt="2022">
                 <p class="photo-label">2022</p>
@@ -26,31 +26,67 @@
         </div>
     </section>
 
+    <section id="pillars">
+        <h2 class="pillars-title animate">Training Pillars</h2>
+        <div class="pillars-grid">
+            <div class="pillar-card animate">
+                <div class="pillar-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg>
+                </div>
+                <h3>Strength</h3>
+                <p>Progressive overload through calisthenics. Every rep builds a foundation designed to last.</p>
+            </div>
+            <div class="pillar-card animate">
+                <div class="pillar-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18V5"/><path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/><path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/><path d="M18 18a4 4 0 0 0 2-7.464"/><path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/><path d="M6 18a4 4 0 0 1-2-7.464"/><path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/></svg>
+                </div>
+                <h3>Mind-Muscle Control</h3>
+                <p>Clean execution over ego. The body adapts to the movement patterns it is exposed to.</p>
+            </div>
+            <div class="pillar-card animate">
+                <div class="pillar-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.409 13.017A5 5 0 0 1 22 15c0 3.866-4 7-9 7-4.077 0-8.153-.82-10.371-2.462-.426-.316-.631-.832-.62-1.362C2.118 12.723 2.627 2 10 2a3 3 0 0 1 3 3 2 2 0 0 1-2 2c-1.105 0-1.64-.444-2-1"/><path d="M15 14a5 5 0 0 0-7.584 2"/><path d="M9.964 6.825C8.019 7.977 9.5 13 8 15"/></svg>
+                </div>
+                <h3>Hypertrophy</h3>
+                <p>Strength developed correctly results in muscle. The physique is a byproduct of the work.</p>
+            </div>
+            <div class="pillar-card animate">
+                <div class="pillar-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2"/><path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2"/><path d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3"/></svg>
+                </div>
+                <h3>Endurance</h3>
+                <p>Conditioning built to carry through training, competition and everyday performance.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="apply">
         <h2>Apply for coaching</h2>
         <p>Fill out the form below</p>
 
         <form action="https://formspree.io/f/xdeaddvv" method="POST" id="coaching-form">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required>
-
-            <label for="age">Age</label>
-            <input type="date" id="age" name="age" placeholder="Your age" required>
-
-            <label for="country">Country</label>
-            <input input type="text" id="country" name="country" placeholder="Your country" required oninput="updateCountryCode()">
-
-            <div class="field-group">
+            <div class="animate">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="animate">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="age" name="age" required>
+            </div>
+            <div class="animate">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" placeholder="Your country" required oninput="updateCountryCode()">
+            </div>
+            <div class="field-group animate">
                 <label>How long have you been training?</label>
                 <div class="radio-group">
                     <label class="radio-label"><input type="radio" name="experience" value="beginner" required> Complete beginner</label>
                     <label class="radio-label"><input type="radio" name="experience" value="less than 1 year"> Less than 1 year</label>
                     <label class="radio-label"><input type="radio" name="experience" value="1-3 years"> 1 to 3 years</label>
-                     <label class="radio-label"><input type="radio" name="experience" value="3+ years"> 3 or more years</label>
+                    <label class="radio-label"><input type="radio" name="experience" value="3+ years"> 3 or more years</label>
                 </div>
             </div>
-
-            <div class="field-group">
+            <div class="field-group animate">
                 <label>Current training style</label>
                 <div class="radio-group">
                     <label class="radio-label"><input type="checkbox" name="style" value="gym"> Gym / Weight Lifting</label>
@@ -59,20 +95,25 @@
                     <label class="radio-label"><input type="checkbox" name="style" value="none"> No structured training</label>
                 </div>
             </div>
-
-            <label for="goals">What are your goals and what do you want to achieve?</label>
-            <textarea id="goals" name="goals" placeholder="Tell me about your goals..." required></textarea>
-
-            <label for="limitations">What was or is still stopping you from achieving your goals by elevation your training to the next level? (Optional)</label>
-            <textarea id="limitations" name="limitations" placeholder="Any limitations..."></textarea>
-
-            <label for="phone">Phone Number</label>
-            <div class="phone-wrap">
-                <input type="text" id="country-code" name="country_code" readonly placeholder="+__">
-                <input type="text" id="phone" name="phone" placeholder="Your number" required>
+            <div class="animate">
+                <label for="goals">What are your goals and what do you want to achieve?</label>
+                <textarea id="goals" name="goals" placeholder="Tell me about your goals..." required></textarea>
             </div>
-
-            <button type="submit">Send Application</button>
+            <div class="animate">
+                <label for="limitations">What was or is still stopping you from achieving your goals by elevating your training to the next level? (Optional)</label>
+                <textarea id="limitations" name="limitations" placeholder="Any limitations..."></textarea>
+            </div>
+            <div class="animate">
+                <label for="phone">Phone Number</label>
+                <div class="phone-wrap">
+                    <input type="text" id="country-code" name="country_code" readonly placeholder="+__">
+                    <input type="text" id="phone" name="phone" placeholder="Your number" required>
+                </div>
+                <small>Upon submission, you will be personally contacted via Telegram within 24 hours.</small>
+            </div>
+            <div class="animate">
+                <button type="submit">Send Application</button>
+            </div>
         </form>
 
         <div id="confirmation" style="display:none">
@@ -83,6 +124,19 @@
             </div>
         </div>
     </section>
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+    </script>
     <script>
     const countryCodes = {
         greece: '+30', germany: '+49', france: '+33',
