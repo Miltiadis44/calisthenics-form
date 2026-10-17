@@ -137,6 +137,7 @@ body {
     gap: 20px;
     width: 100%;
     max-width: 600px;
+    margin: 0 auto
 }
 
 .story-photos img {
