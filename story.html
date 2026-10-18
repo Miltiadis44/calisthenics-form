@@ -65,9 +65,10 @@
         <p>Fill out the form below</p>
 
         <form action="https://formspree.io/f/xdeaddvv" method="POST" id="coaching-form">
+            <input type="text" name="_gotcha" style="display:none">
             <div class="animate">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                <input type="text" id="name" name="name" placeholder="Your full name" pattern="[^\d!@#$%^&amp;*()_+=\[\]{};':\\|,.&lt;&gt;?/`~]+" title="Please enter a valid name" required>
             </div>
             <div class="animate">
                 <label for="dob">Date of Birth</label>
@@ -107,7 +108,7 @@
                 <label for="phone">Phone Number</label>
                 <div class="phone-wrap">
                     <input type="text" id="country-code" name="country_code" readonly placeholder="+__">
-                    <input type="text" id="phone" name="phone" placeholder="Your number" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Your number" minlength="7" required>
                 </div>
                 <small>Upon submission, you will be personally contacted via Telegram within 24 hours.</small>
             </div>

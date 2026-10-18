@@ -358,6 +358,18 @@ button[type=submit]:hover {
     font-weight: 700;
 }
 
+input[type=number],
+input[type=tel] {
+    background-color: #222222;
+    border: 1px solid #333333;
+    border-bottom: 2px solid #F5A623;
+    color: #ffffff;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    outline: none;
+}
+
 .radio-group {
     display: flex;
     flex-direction: column;
